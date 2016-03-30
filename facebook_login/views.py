@@ -55,7 +55,7 @@ def get_facebook_access_token(code):
 
 def get_facebook_user_info(access_token):
     """
-        Access token is use for getting the facebook user info and email address.
+        Access token is use for getting the linkedin user info and email address.
     """
     graph_url = "https://graph.facebook.com/me?access_token=%s&fields=picture.type(large), email" % access_token
     public_info_url = "https://graph.facebook.com/me?access_token=%s" % access_token
