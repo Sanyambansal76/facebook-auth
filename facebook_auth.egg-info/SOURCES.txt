@@ -1,6 +1,5 @@
 LICENSE
 MANIFEST.in
-README.rst
 setup.py
 facebook_auth.egg-info/PKG-INFO
 facebook_auth.egg-info/SOURCES.txt

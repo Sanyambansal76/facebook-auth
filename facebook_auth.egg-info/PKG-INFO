@@ -6,7 +6,9 @@ Home-page: https://github.com/technoarch-softwares/facebook-auth
 Author: Pankul Mittal
 Author-email: mittal.pankul@gmail.com
 License: BSD License
-Description: UNKNOWN
+Description: # facebook-auth
+        Authentication using Facebook
+        
 Platform: UNKNOWN
 Classifier: Environment :: Web Environment
 Classifier: Framework :: Django
