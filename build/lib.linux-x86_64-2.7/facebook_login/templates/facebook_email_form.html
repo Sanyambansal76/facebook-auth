@@ -1,0 +1,11 @@
+<form action="{% url 'facebook_email_form' %}" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        {{ field.label }}
+        {{ field }}
+        {{ field.errors }}
+    {% endfor %}
+    <button class="btn btn-info" type='submit'>
+        <b>Sign in</b>
+    </button>
+</form>
