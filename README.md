@@ -17,7 +17,7 @@ Quick start
 
         'facebook_login',
 
-    `)`
+    )`
     
     `SITE_URL = 'SITE DOMIAN' #like 'http://localhost:8000/'`
     
