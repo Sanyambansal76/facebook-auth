@@ -9,7 +9,7 @@ Quick start
 
     `pip install git+https://github.com/technoarch-softwares/facebook-auth`
 
-2. `Add "facebook_login"` to your `INSTALLED_APPS` setting like this::
+2. Add `"facebook_login"` to your `INSTALLED_APPS` setting like this::
 
     INSTALLED_APPS = (
 
