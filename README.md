@@ -11,13 +11,13 @@ Quick start
 
 2. `Add "facebook_login"` to your `INSTALLED_APPS` setting like this::
 
-    `INSTALLED_APPS = (
+    INSTALLED_APPS = (
 
         ...
 
         'facebook_login',
 
-    )`
+    )
     
     `SITE_URL = 'SITE DOMIAN' #like 'http://localhost:8000/'`
     
