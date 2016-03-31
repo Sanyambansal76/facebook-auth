@@ -11,11 +11,11 @@ Quick start
 
 2. `Add "facebook_login"` to your `INSTALLED_APPS` setting like this::
 
-    `INSTALLED_APPS = (`
+    `INSTALLED_APPS = (
 
-        `...,`
+        ...
 
-        `'facebook_login',`
+        'facebook_login',
 
     `)`
     
