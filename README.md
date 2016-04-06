@@ -44,3 +44,17 @@ Quick start
 
 8. Visit http://127.0.0.1:8000/facebook/ to participate in the facebook authentication.
 
+
+#Features
+
+1. Access the Facebook API, from:
+        Your website (Using OAuth)
+        Facebook canvas pages (For building facebook applications)
+
+2. Django User Registration (Convert Facebook user data into a user model)
+
+3. Store user data locally.
+
+4. Facebook FQL access
+
+5. Automated reauthentication (For expired tokens)
