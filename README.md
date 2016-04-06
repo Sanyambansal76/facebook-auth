@@ -47,10 +47,8 @@ Quick start
 
 #Features
 
-1. Access the Facebook API, from:
-        Your website (Using OAuth)
-        Facebook canvas pages (For building facebook applications)
-
+1. Access the Facebook API, from Your website (Using OAuth)
+        
 2. Django User Registration (Convert Facebook user data into a user model)
 
 3. Store user data locally.
