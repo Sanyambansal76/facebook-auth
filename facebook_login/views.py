@@ -29,8 +29,9 @@ def facebook_login(request):
     Oauth authentication of the signin user from the facebook.
     Respond back at the redirect_url
     """
-    url = "https://graph.facebook.com/oauth/authorize?client_id=%s&redirect_uri=%s" \
-        % (settings.FACEBOOK_CLIENT_ID, facebook_redirect_url)
+    permissions = (", ").join([permission for permission in settings.FACEBOOK_EXTENDED_PERMISSIONS])
+    url = "https://graph.facebook.com/oauth/authorize?client_id=%s&redirect_uri=%s&scope=%s" \
+        % (settings.FACEBOOK_CLIENT_ID, facebook_redirect_url, permissions)
 
     return HttpResponseRedirect(url)
 
@@ -55,14 +56,12 @@ def get_facebook_access_token(code):
 
 def get_facebook_user_info(access_token):
     """
-        Access token is use for getting the linkedin user info and email address.
+        Access token is use for getting the Facebook user info and email address.
     """
     graph_url = "https://graph.facebook.com/me?access_token=%s&fields=picture.type(large), email" % access_token
     public_info_url = "https://graph.facebook.com/me?access_token=%s" % access_token
-
     profile = json.load(urllib.urlopen(graph_url))
     profile_info = json.load(urllib.urlopen(public_info_url))
-
     profile_response_dict = {}
     profile_response_dict.update(profile)
     profile_response_dict.update(profile_info)
