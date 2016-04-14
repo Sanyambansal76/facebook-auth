@@ -40,9 +40,13 @@ Quick start
 
 6. Run `python manage.py migrate` to create the `facebook_login` models.
 
-7. It will create a table into database named by `facebook_login_facebookprofile`.
+7. Add the permissions in your settings file like this 
+ 
+  `FACEBOOK_EXTENDED_PERMISSIONS = ['email']` 
 
-8. Visit http://127.0.0.1:8000/facebook/ to participate in the facebook authentication.
+8. It will create a table into database named by `facebook_login_facebookprofile`.
+
+9. Visit http://127.0.0.1:8000/facebook/ to participate in the facebook authentication.
 
 
 #Features
@@ -56,3 +60,5 @@ Quick start
 4. Facebook FQL access
 
 5. Automated reauthentication (For expired tokens)
+
+6. Data Saved in `facebook_login_facebookprofile` table 
