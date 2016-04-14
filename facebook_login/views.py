@@ -58,10 +58,18 @@ def get_facebook_user_info(access_token):
     """
         Access token is use for getting the Facebook user info and email address.
     """
-    graph_url = "https://graph.facebook.com/me?access_token=%s&fields=picture.type(large), email" % access_token
+    required_data_list = []
+    for per in settings.FACEBOOK_EXTENDED_PERMISSIONS:
+        required_data_list.append(per.replace("user_",""))
+    
+    required_data = (", ").join([data for data in required_data_list])
+    
+    graph_url = "https://graph.facebook.com/me?access_token=%s&fields=%s" % (access_token,required_data)
     public_info_url = "https://graph.facebook.com/me?access_token=%s" % access_token
+    
     profile = json.load(urllib.urlopen(graph_url))
     profile_info = json.load(urllib.urlopen(public_info_url))
+    
     profile_response_dict = {}
     profile_response_dict.update(profile)
     profile_response_dict.update(profile_info)
